@@ -1,3 +1,5 @@
 class User < ApplicationRecord
-    validates :username, presence: true, length: { maximum: 50 }, uniqueness: true
+    validates :username, presence: true, uniqueness: true
+    validates :email, presence: true, uniqueness: true
+    validates :password, presence: true, confirmation: true
 end
